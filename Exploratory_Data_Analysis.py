@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 # code portable across teammates' computers as long as they share the project
 # structure shown in the docstring.
 PROJECT_ROOT = Path(__file__).resolve().parent
-DEFAULT_DATA_ROOT = PROJECT_ROOT / "raw dataset"
+DEFAULT_DATA_ROOT = PROJECT_ROOT / "raw_dataset"
 DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "eda_results"
 
 # One clinically interpretable summary per time-varying variable.
@@ -53,7 +53,7 @@ def arguments() -> argparse.Namespace:
         "--data-root",
         type=Path,
         default=DEFAULT_DATA_ROOT,
-        help="Dataset folder containing outcomes.csv and icu_records/ (default: ./raw dataset).",
+        help="Dataset folder containing outcomes.csv and icu_records/ (default: ./raw_dataset).",
     )
     parser.add_argument(
         "--output-dir",
