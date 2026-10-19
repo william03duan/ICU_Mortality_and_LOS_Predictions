@@ -126,7 +126,7 @@ def create_patient_level_table(data_root: Path, outcomes: pd.DataFrame) -> pd.Da
 
 
 def create_eda_plots(data: pd.DataFrame, missingness: pd.DataFrame, output_dir: Path) -> None:
-    """Save six simple charts for EDA of the two key prediction outcomes."""
+    """Creat visualization charts from exploratory data analysis."""
 
     plt.rcParams.update({"font.size": 10, "axes.titlesize": 12, "axes.labelsize": 10})
 
@@ -231,6 +231,7 @@ def create_eda_plots(data: pd.DataFrame, missingness: pd.DataFrame, output_dir: 
 
 
 def save_eda_outputs(data: pd.DataFrame, output_dir: Path) -> None:
+    """Save the data visualization outputs"""
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # Missingness is calculated for the chart and for the preprocessing flags,
